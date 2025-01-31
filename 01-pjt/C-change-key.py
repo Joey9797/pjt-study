@@ -34,15 +34,18 @@ def getNewData(krData):
     engData = getDataValue('main', 'weather')
     dataKey1 = list(engData.keys())
     newDict = {}
-    for krKey in krData:
-        if krKey in dataKey1:
-            newDict[krData[krKey]] = engData[krKey]
-            # for list(engData[krKey].keys())
-    return list(engData[krKey].keys())
+    for key1 in engData:
+        for key2 in engData[key1]:
+            if key2 
+    # for krKey in krData:
+    #     if krKey in dataKey1:
+    #         newDict[krData[krKey]] = engData[krKey]
+    #         for list(engData[krKey].keys())
+    # return list(engData[krKey].keys())
 
 
 
-newData = {'feels_like' : '체감온도',
+krData = {'feels_like' : '체감온도',
           'humidity' : '습도',
           'pressure' : '기압',
           'temp' : '온도',
@@ -55,7 +58,7 @@ newData = {'feels_like' : '체감온도',
           'weather' : '날씨',
           }
 
-pprint.pprint(getNewData(newData))
+pprint.pprint(getNewData(krData))
 
 
 
