@@ -13,5 +13,16 @@ def get_deposit_products():
     return result
 
 data = get_deposit_products()
-dataKey = data.keys()
-pprint.pprint(dataKey)
+
+def getDataValue(*args):
+    dataValue = {}
+    for arg in args:
+        value = data[arg]
+        if isinstance(value, list):
+            dataValue[arg] = value[0]
+        else :
+            dataValue[arg] = value
+
+    return dataValue
+
+pprint.pprint(getDataValue('main', 'weather'))
