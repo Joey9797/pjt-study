@@ -1,0 +1,17 @@
+<!-- foods/index.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>INDEX PAGE</h1>
+  {% for recipe in recipes %}
+    <h2>{{ recipe.name }}</h2>
+    <p>{{ recipe.description }}</p>
+    <p>{{ recipe.ingredients }}</p>
+    {% comment %} <ul>
+      {% for ingredient in recipe.ingredients.all %}
+        <li>{{ ingredient.name }}</li>
+      {% endfor %}
+    </ul> {% endcomment %}
+    <hr>
+  {% endfor %}
+{% endblock content %}

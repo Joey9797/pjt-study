@@ -1,0 +1,23 @@
+[
+{
+    "model": "foods.ingredient",
+    "pk": 1,
+    "fields": {
+        "name": "스파게티"
+    }
+},
+{
+    "model": "foods.ingredient",
+    "pk": 2,
+    "fields": {
+        "name": "올리브"
+    }
+},
+{
+    "model": "foods.ingredient",
+    "pk": 3,
+    "fields": {
+        "name": "토마토"
+    }
+}
+]
